@@ -9,6 +9,7 @@
 
    <header>
        <nav>
+         <a href="index.html">
          <img src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
          </a>
          <ul>
@@ -24,47 +25,52 @@
    <main>
      <h1>Магазин готовых шаблонов</h1>
 
-     <section>
+     </form action="https://echo.htmlacademy.ru/" method="get">
+
+     <div>
        <h2>Стоимость</h2>
+       <input type="range" min="0" max="15 000">
        <!--Фильтр стоимости-->
        <!--Блок «Стоимость»: при взаимодействии с любым
        из маркеров в качестве указателя допускается использовать
        любой подходящий тип курсора. Делать маркеры интерактивными
        не обязательно, стоимость меняться не должна.-->
-     </section>
+     </div>
 
-     <section>
+     <div>
        <!--Фильтр (блоки «Сетка», «Особенности»):
        клик по кнопке «Показать» отправляет форму.-->
        <h2>Сетка</h2>
        <ul>
-         <li><img src="img/icons/radio-on.svg" width="20" alt="radio-on">Адаптивная</li>
-         <li><img src="img/icons/radio-off.svg" width="20" alt="radio-off">Фиксированная</li>
-         <li><img src="img/icons/radio-off.svg" width="20" alt="radio-off">Резиновая</li>
+         <li>Адаптивная</li>
+         <li>Фиксированная</li>
+         <li>Резиновая</li>
        </ul>
+     </div>
 
+     <div>
        <h2>Особенности</h2>
        <ul>
-         <li><img src="img/icons/checkbox-on.svg" width="20" alt="checkbox-on">Слайдер</li>
-         <li><img src="img/icons/checkbox-off.svg" width="20" alt="checkbox-off">Блок преимуществ</li>
-         <li><img src="img/icons/checkbox-on.svg" width="20" alt="checkbox-on">Новости</li>
-         <li><img src="img/icons/checkbox-off.svg" width="20" alt="checkbox-off">Галерея</li>
-         <li><img src="img/icons/checkbox-off.svg" width="20" alt="checkbox-off">Корзина</li>
+         <li>Слайдер</li>
+         <li>Блок преимуществ</li>
+         <li>Новости</li>
+         <li>Галерея</li>
+         <li>Корзина</li>
        </ul>
-
+     </div>
        <!--кнопка «Показать» отвечает за отправку формы
        на адрес https://echo.htmlacademy.ru/-->
-       <button>Показать</button>
-     </section>
+       <input type="submit" value="Показать">
+     </form>
 
      <div>
        <h2>Сортировать:</h2>
        <ul>
-         <li>по цене</li>
-         <li>по типу</li>
-         <li>по названию</li>
-         <li><img src="img/icons/icon-up-dir.svg" width="20" alt="стрелка вверх"></li>
-         <li><img src="img/icons/icon-down-dir.svg" width="20" alt="стрелка вниз"></li>
+         <li><a href="">по цене</a></li>
+         <li><a href="">по типу</a></li>
+         <li><a href="">по названию</a></li>
+         <li><!--стрелка вверх--></li>
+         <li><!--стрелка вниз"--></li>
        </ul>
      </div>
 
@@ -77,12 +83,24 @@
        кнопка покупки не должна пропадать. Количество товаров в правом
        блоке может быть любым, оно не должно ломать страницу.-->
        <ul>
-         <li><a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a></li>
-         <li><a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a></li>
-         <li><a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a></li>
-         <li><a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a></li>
-         <li><a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a></li>
-         <li><a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a></li>
+         <li>
+           <div><span></span><span></span><span></span></div>
+           <a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a></li>
        </ul>
 
        <ul>
@@ -110,15 +128,19 @@
        ширины макета. На карте размещён маркер. Центр карты соответствует
        центру блока в макете. Допустимо использовать как стандартный,
        так и кастомный маркер. Реализация по желанию.-->
-         <h3>Nёrds design studio</h3>
-           <adress>191186, Санкт-Петербург,<br>
-           ул. Б. Конюшенная, д. 19/8</adress>
+         <div>
+           <adress>
+             <p>Nёrds design studio</p>
+             <p>191186, Санкт-Петербург,<br>
+             ул. Б. Конюшенная, д. 19/8</p>
+             <p><a href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
+           </adress>
 
-       <a href="tel:+78122757575">тел: +7 (812) 275-75-75</a>
-       <!--Клик по кнопке «Напишите нам» открывает модальное окно
-       с формой обратной связи. Окно позиционируется относительно
-       вьюпорта, а не страницы.-->
-       <button>Напишите нам</button>
+         <!--Клик по кнопке «Напишите нам» открывает модальное окно
+         с формой обратной связи. Окно позиционируется относительно
+         вьюпорта, а не страницы.-->
+         <button>Напишите нам</button>
+         </div>
        <img src="img/map-marker.png" width="100" alt="map marker">
        <img src="img/map.png" width="200" alt="map">
      </section>
@@ -133,13 +155,13 @@
        <h2>Наши социальные сети</h2>
        <ul>
          <li>
-           <a href="#"><img src="img/icons/vk-round-icon.svg" width="50" alt="vk">Вконтакте</a>
+           <a href="#"><!--Вконтакте--></a>
          </li>
          <li>
-           <a href="#"><img src="img/icons/fb-round-icon.svg" width="50" alt="fb">Facebook</a>
+           <a href="#"><!--Facebook--></a>
          </li>
          <li>
-           <a href="#"><img src="img/icons/inst-round-icon.svg" width="50" alt="inst">Instagram</a>
+           <a href="#"><!--Instagram--></a>
          </li>
        </ul>
      </section>

@@ -28,35 +28,51 @@
      </form action="https://echo.htmlacademy.ru/" method="get">
 
      <div>
-       <h2>Стоимость</h2>
-       <input type="range" min="0" max="15 000">
-       <!--Фильтр стоимости-->
-       <!--Блок «Стоимость»: при взаимодействии с любым
-       из маркеров в качестве указателя допускается использовать
-       любой подходящий тип курсора. Делать маркеры интерактивными
-       не обязательно, стоимость меняться не должна.-->
+       <label>
+         <h2>Стоимость</h2>
+         <input type="range" min="0" max="15 000">
+         <!--Фильтр стоимости-->
+         <!--Блок «Стоимость»: при взаимодействии с любым
+         из маркеров в качестве указателя допускается использовать
+         любой подходящий тип курсора. Делать маркеры интерактивными
+         не обязательно, стоимость меняться не должна.-->
+       </label>
      </div>
 
      <div>
        <!--Фильтр (блоки «Сетка», «Особенности»):
        клик по кнопке «Показать» отправляет форму.-->
-       <h2>Сетка</h2>
-       <ul>
-         <li>Адаптивная</li>
-         <li>Фиксированная</li>
-         <li>Резиновая</li>
-       </ul>
+       <!-- <label name="grid"> -->
+         <h2>Сетка</h2>
+         <input type="radio" name="grid" id="adaptivity" value="Адаптивная" checked>
+         <label for="adaptivity">Адаптивная</label>
+         <br>
+         <input type="radio" name="grid" id="fixy" value="Фиксированная">
+         <label for="fixy">Фиксированная</label>
+         <br>
+         <input type="radio" name="grid" id="rubber" value="Резиновая">
+         <label for="rubber">Резиновая</label>
+       <!-- </label> -->
      </div>
 
      <div>
+       <!-- <label name="features"> -->
        <h2>Особенности</h2>
-       <ul>
-         <li>Слайдер</li>
-         <li>Блок преимуществ</li>
-         <li>Новости</li>
-         <li>Галерея</li>
-         <li>Корзина</li>
-       </ul>
+       <input type="checkbox" name="features" id="slider" value="Слайдер">
+       <label for="slider">Слайдер</label>
+       <br>
+       <input type="checkbox" name="features" id="benefits" value="Блок преимуществ">
+       <label for="benefits">Блок преимуществ</label>
+       <br>
+       <input type="checkbox" name="features" id="news" value="Новости">
+       <label for="news">Новости</label>
+       <br>
+       <input type="checkbox" name="features" id="gallery" value="Галерея">
+       <label for="gallery">Галерея</label>
+       <br>
+       <input type="checkbox" name="features" id="basket" value="Корзина">
+       <label for="basket">Корзина</label>
+       <!-- </label> -->
      </div>
        <!--кнопка «Показать» отвечает за отправку формы
        на адрес https://echo.htmlacademy.ru/-->
@@ -64,18 +80,20 @@
      </form>
 
      <div>
+
+       <div>
        <h2>Сортировать:</h2>
        <ul>
-         <li><a href="">по цене</a></li>
-         <li><a href="">по типу</a></li>
-         <li><a href="">по названию</a></li>
-         <li><!--стрелка вверх--></li>
-         <li><!--стрелка вниз"--></li>
+         <li><button>по цене</button></li>
+         <li><button>по типу</button></li>
+         <li><button>по названию</button></li>
+         <li><button aria-label="цена по возрастанию"><!--стрелка вверх--></button></li>
+         <li><button aria-label="цена по усеньшению"><!--стрелка вниз"--></button></li>
        </ul>
      </div>
 
      <section>
-       <h2>Каталог сайтов</h2>
+       <h2 class="visually-hidden">Каталог сайтов</h2>
        <!--Карточка товара: название товара является ссылкой,
        клик по нему открывает модальное окно с демонстрацией товара.
        Модальное окно верстать не нужно. Карточка товара: при наполнении
@@ -84,23 +102,35 @@
        блоке может быть любым, оно не должно ломать страницу.-->
        <ul>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a></li>
+           </article>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a></li>
+           </article>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a></li>
+           </article>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a></li>
+           </article>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a></li>
+           </article>
          <li>
-           <div><span></span><span></span><span></span></div>
-           <a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a></li>
+           <article>
+             <div><span></span><span></span><span></span></div>
+             <a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a></li>
+           </article>
        </ul>
 
        <ul>
@@ -121,6 +151,8 @@
          </li>
        </ul>
      </section>
+
+   </div>
 
      <section>
        <!--Блок карты: интерактивная карта. Высота карты постоянная,
@@ -149,10 +181,8 @@
 
    <footer>
 
-     <h2>Как нас найти</h2>
-
      <section>
-       <h2>Наши социальные сети</h2>
+       <h2 class="visually-hidden">Наши социальные сети</h2>
        <ul>
          <li>
            <a href="#"><!--Вконтакте--></a>

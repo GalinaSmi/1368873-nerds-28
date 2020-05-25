@@ -44,39 +44,49 @@
        клик по кнопке «Показать» отправляет форму.-->
        <!-- <label name="grid"> -->
          <h2>Сетка</h2>
-         <input type="radio" name="grid" id="adaptivity" value="Адаптивная" checked>
-         <label for="adaptivity">Адаптивная</label>
-         <br>
-         <input type="radio" name="grid" id="fixy" value="Фиксированная">
-         <label for="fixy">Фиксированная</label>
-         <br>
-         <input type="radio" name="grid" id="rubber" value="Резиновая">
-         <label for="rubber">Резиновая</label>
+         <p>
+           <input type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
+           <label for="adaptivity">Адаптивная</label>
+         </p>
+         <p>
+           <input type="radio" name="grid" id="fixy" value="fixy">
+           <label for="fixy">Фиксированная</label>
+         </p>
+         <p>
+           <input type="radio" name="grid" id="rubber" value="rubber">
+           <label for="rubber">Резиновая</label>
+         </p>
        <!-- </label> -->
      </div>
 
      <div>
        <!-- <label name="features"> -->
        <h2>Особенности</h2>
-       <input type="checkbox" name="features" id="slider" value="Слайдер">
-       <label for="slider">Слайдер</label>
-       <br>
-       <input type="checkbox" name="features" id="benefits" value="Блок преимуществ">
-       <label for="benefits">Блок преимуществ</label>
-       <br>
-       <input type="checkbox" name="features" id="news" value="Новости">
-       <label for="news">Новости</label>
-       <br>
-       <input type="checkbox" name="features" id="gallery" value="Галерея">
-       <label for="gallery">Галерея</label>
-       <br>
-       <input type="checkbox" name="features" id="basket" value="Корзина">
-       <label for="basket">Корзина</label>
+       <p>
+         <input type="checkbox" name="features" id="slider" value="slider">
+         <label for="slider">Слайдер</label>
+       </p>
+       <p>
+         <input type="checkbox" name="features" id="benefits" value="benefits">
+         <label for="benefits">Блок преимуществ</label>
+       </p>
+       <p>
+         <input type="checkbox" name="features" id="news" value="news">
+         <label for="news">Новости</label>
+       </p>
+       <p>
+         <input type="checkbox" name="features" id="gallery" value="gallery">
+         <label for="gallery">Галерея</label>
+       </p>
+       <p>
+         <input type="checkbox" name="features" id="basket" value="basket">
+         <label for="basket">Корзина</label>
+       </p>
        <!-- </label> -->
      </div>
        <!--кнопка «Показать» отвечает за отправку формы
        на адрес https://echo.htmlacademy.ru/-->
-       <input type="submit" value="Показать">
+       <button>Показать</button>
      </form>
 
      <div>
@@ -133,23 +143,15 @@
            </article>
        </ul>
 
+       <nav role="navigation" aria-label="Страницы перехода">
        <ul>
-         <li>
-           <a href="">Предыдущая</a>
-         </li>
-         <li>
-           <a>1</a>
-         </li>
-         <li>
-           <a href="">2</a>
-         </li>
-         <li>
-           <a href="">3</a>
-         </li>
-         <li>
-           <a href="">Следующая</a>
-         </li>
+         <li><a href="">Предыдущая</a></li>
+         <li><a>1</a></li>
+         <li><a href="">2</a></li>
+         <li><a href="">3</a></li>
+         <li><a href="">Следующая</a></li>
        </ul>
+     </nav>
      </section>
 
    </div>
@@ -175,6 +177,22 @@
          </div>
        <img src="img/map-marker.png" width="100" alt="map marker">
        <img src="img/map.png" width="200" alt="map">
+
+       <div>
+         <h2>Напишите нам</h2>
+         <form action="https://echo.htmlacademy.ru/" method="post">
+           <label>
+             Ваше имя:<input type="text" name="name" value="Имя Фамилия">
+           </label>
+           <label>
+             Ваш email:<input type="email" name="email" value="email@example.com">
+           </label>
+           <p>Текст письма:</p>
+           <textarea name="text" id="textblock" rows="10" cols="50">В свободной форме</textarea>
+           </label>
+           <input type="submit" value="Отправить">
+         </form>
+       </div>
      </section>
 
    </main>
@@ -185,13 +203,13 @@
        <h2 class="visually-hidden">Наши социальные сети</h2>
        <ul>
          <li>
-           <a href="#"><!--Вконтакте--></a>
+           <a href="#"><span class="visually-hidden">Вконтакте</span></a>
          </li>
          <li>
-           <a href="#"><!--Facebook--></a>
+           <a href="#"><span class="visually-hidden">Facebook</span></a>
          </li>
          <li>
-           <a href="#"><!--Instagram--></a>
+           <a href="#"><span class="visually-hidden">Instagram</span></a>
          </li>
        </ul>
      </section>

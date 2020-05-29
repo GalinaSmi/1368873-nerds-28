@@ -3,35 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Сайт дизайн-студии Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
 
    <header>
-       <nav>
+       <nav class="main-navigation">
          <a href="index.html" title="На главную">
-         <img src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
+           <img src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
          </a>
-         <ul>
+         <ul class="site-navigation">
            <li><a href="">Студия</a></li>
            <li><a href="">Клиенты</a></li>
-           <li><a href="">Магазин</a></li>
+           <li><a>Магазин</a></li>
            <li><a href="">Контакты</a></li>
         </ul>
-        <a href=""><img src="img/icons/cart-icon.svg" width="20" alt="корзина">Корзина</a>
+        <a class="basket-navigation" href="">Корзина</a>
        </nav>
    </header>
 
    <main>
 
-     <h1>Магазин готовых шаблонов</h1>
-     <form action="https://echo.htmlacademy.ru/" method="get">
+     <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+     <form class="catalog-form" action="https://echo.htmlacademy.ru/" method="get">
        <!--Блок «Стоимость»: при взаимодействии с любым
        из маркеров в качестве указателя допускается использовать
        любой подходящий тип курсора. Делать маркеры интерактивными
        не обязательно, стоимость меняться не должна.-->
        <div class="range">
-         <h2>Стоимость</h2><!--Фильтр стоимости-->
+         <h2>Стоимость:</h2><!--Фильтр стоимости-->
          <div>
            <button type="button" aria-label="минимальная цена"></button>
            <button type="button" aria-label="максимальная цена"></button>
@@ -53,22 +56,22 @@
          <!--Фильтр (блоки «Сетка», «Особенности»):
          клик по кнопке «Показать» отправляет форму.-->
          <!-- <label name="grid"> -->
-           <h2>Сетка</h2>
+           <h2>Сетка:</h2>
            <p>
              <label class="radio-button">
-               <input type="radio" class="radio-button-input" name="grid" id="adaptivity" value="adaptivity" checked>
+               <input class="radio-button-input" type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
                <span class="radio-button-label">Адаптивная</span>
              </label>
            </p>
            <p>
              <label class="radio-button">
-               <input type="radio" class="radio-button-input" name="grid" id="fixy" value="fixy">
+               <input class="radio-button-input" type="radio" name="grid" id="fixy" value="fixy">
                <span class="radio-button-label">Фиксированная</span>
              </label>
            </p>
            <p>
              <label class="radio-button">
-               <input type="radio" class="radio-button-input" name="grid" id="rubber" value="rubber">
+               <input class="radio-button-input" type="radio" name="grid" id="rubber" value="rubber">
                <span class="radio-button-label">Резиновая</span>
              </label>
            </p>
@@ -77,34 +80,34 @@
 
        <div>
          <!-- <label name="features"> -->
-         <h2>Особенности</h2>
+         <h2>Особенности:</h2>
          <p>
            <label class="checkbox">
-             <input type="checkbox" class="checkbox-input" name="features" id="slider" value="slider">
+             <input class="checkbox-input" type="checkbox" name="features" id="slider" value="slider">
              <span class="checkbox-label">Слайдер</span>
            </label>
          </p>
          <p>
            <label class="checkbox">
-             <input type="checkbox" class="checkbox-input" name="features" id="benefits" value="benefits">
+             <input class="checkbox-input" type="checkbox" name="features" id="benefits" value="benefits">
              <span class="checkbox-label">Блок преимуществ</span>
            </label>
          </p>
          <p>
            <label class="checkbox">
-             <input type="checkbox" class="checkbox-input" name="features" id="news" value="news">
+             <input class="checkbox-input" type="checkbox" ame="features" id="news" value="news">
              <span class="checkbox-label">Новости</span>
            </label>
          </p>
          <p>
            <label class="checkbox">
-             <input type="checkbox" class="checkbox-input" name="features" id="gallery" value="gallery">
+             <input class="checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
              <span class="checkbox-label">Галерея</span>
            </label>
          </p>
          <p>
            <label class="checkbox">
-             <input type="checkbox" class="checkbox-input" name="features" id="basket" value="basket">
+             <input class="checkbox-input" type="checkbox" name="features" id="basket" value="basket">
              <span class="checkbox-label">Корзина</span>
            </label>
          </p>
@@ -112,14 +115,14 @@
        </div>
          <!--кнопка «Показать» отвечает за отправку формы
          на адрес https://echo.htmlacademy.ru/-->
-         <button>Показать</button>
+         <button class="button-gray">Показать</button>
      </form>
 
      <div><!--Блок сортировки и страниц каталога.-->
 
        <div>
        <h2>Сортировать:</h2>
-       <ul>
+       <ul class="catalog-sorting">
          <li><a href="">по цене</a></li>
          <li><a href="">по типу</a></li>
          <li><a href="">по названию</a></li>
@@ -132,7 +135,7 @@
        </ul>
      </div>
 
-     <section>
+     <section class="catalog-pages">
        <h2 class="visually-hidden">Каталог сайтов</h2>
        <!--Карточка товара: название товара является ссылкой,
        клик по нему открывает модальное окно с демонстрацией товара.
@@ -146,9 +149,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a>
              <div>
-               <h3><a href="">Sedona<a></h3>
+               <h3><a class="catalog-pages-title" href="">Sedona<a></h3>
                <p>Информационный сайт для туристов</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -157,9 +160,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a>
              <div>
-               <h3><a href="">Pink app<a></h3>
+               <h3><a class="catalog-pages-title" href="">Pink app<a></h3>
                <p>Продуктовый лендинг приложения для iOS и Android</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -168,9 +171,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a>
              <div>
-               <h3><a href="">Barbershop<a></h3>
+               <h3><a class="catalog-pages-title" href="">Barbershop<a></h3>
                <p>Сайт салона красоты. Для мужчин, да.</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -179,9 +182,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a>
              <div>
-               <h3><a href="">Mishka<a></h3>
+               <h3><a class="catalog-pages-title" href="">Mishka<a></h3>
                <p>Интернет-магазин вязаных игрушек</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -190,9 +193,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a>
              <div>
-               <h3><a href="">A plus<a></h3>
+               <h3><a class="catalog-pages-title" href="">A plus<a></h3>
                <p>Лендинг курсов повышения квалификации</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -201,9 +204,9 @@
              <div><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a>
              <div>
-               <h3><a href="">Кваст<a></h3>
+               <h3><a class="catalog-pages-title" href="">Кваст<a></h3>
                <p>Промо-сайт производителя крафтового кваса</p>
-               <a href="">9 900 &#8381;</a>
+               <a class="button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -211,66 +214,72 @@
 
        <div role="navigation" aria-label="Страницы перехода">
        <ul>
-         <li><a href="">Предыдущая</a></li>
+         <li><a class="button-gray" href="">Предыдущая</a></li>
          <li><a>1</a></li>
-         <li><a href="">2</a></li>
-         <li><a href="">3</a></li>
-         <li><a href="">Следующая</a></li>
+         <li><a class="button-gray" href="">2</a></li>
+         <li><a class="button-gray" href="">3</a></li>
+         <li><a class="button-gray" href="">Следующая</a></li>
        </ul>
      </div>
      </section>
 
    </div>
 
-     <section>
-       <!--Блок карты: интерактивная карта. Высота карты постоянная,
-       ширина подстраивается под ширину вьюпорта, но не уже контентной
-       ширины макета. На карте размещён маркер. Центр карты соответствует
-       центру блока в макете. Допустимо использовать как стандартный,
-       так и кастомный маркер. Реализация по желанию.-->
-         <div>
-           <address>
-             <p>Nёrds design studio</p>
-             <p>191186, Санкт-Петербург,<br>
-             ул. Б. Конюшенная, д. 19/8</p>
-             <p><a href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
-           </address>
-         <!--Клик по кнопке «Напишите нам» открывает модальное окно
-         с формой обратной связи. Окно позиционируется относительно
-         вьюпорта, а не страницы.-->
-         <a href="">Напишите нам</a>
-         </div>
-       <img src="img/map-marker.png" width="100" alt="map marker">
-       <img src="img/map.png" width="200" alt="map">
-     </section>
+   <section class="map">
+     <!--Блок карты: интерактивная карта. Высота карты постоянная,
+     ширина подстраивается под ширину вьюпорта, но не уже контентной
+     ширины макета. На карте размещён маркер. Центр карты соответствует
+     центру блока в макете. Допустимо использовать как стандартный,
+     так и кастомный маркер. Реализация по желанию.-->
+       <div>
+         <address>
+           <p class="map-title">Nёrds design studio</p>
+           <p class="map-adress">191186, Санкт-Петербург,<br>
+           ул. Б. Конюшенная, д. 19/8</p>
+           <p><a class="map-telephone" href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
+         </address>
+       <!--Клик по кнопке «Напишите нам» открывает модальное окно
+       с формой обратной связи. Окно позиционируется относительно
+       вьюпорта, а не страницы.-->
+       <a class="button-pink" href="">Напишите нам</a>
+       </div>
+     <img src="img/map-marker.png" width="100" alt="map marker">
+     <img src="img/map.png" width="200" alt="map">
+   </section>
 
    </main>
 
-   <footer>
+   <footer class="main-footer">
 
-     <section>
+     <section class="footer-social">
        <h2 class="visually-hidden">Наши социальные сети</h2>
        <ul>
          <li>
-           <a href=""><span class="visually-hidden">Вконтакте</span></a>
+           <a class="social-button" href=""><span class="visually-hidden">Вконтакте</span>
+             <svg width="27" height="16" viewBox="0 0 128 76"><path d="M125,5.15c.89-3,0-5.15-4.23-5.15h-14a6,6,0,0,0-6.09,4S93.59,21.31,83.5,32.59c-3.26,3.26-4.74,4.3-6.52,4.3-.89,0-2.18-1-2.18-4V5.15c0-3.56-1-5.15-4-5.15h-22a3.37,3.37,0,0,0-3.56,3.22c0,3.37,5,4.15,5.56,13.64V37.48c0,4.52-.82,5.34-2.6,5.34-4.74,0-16.29-17.43-23.13-37.38C23.72,1.57,22.38,0,18.8,0H4.8C.8,0,0,1.88,0,4c0,3.71,4.75,22.1,22.1,46.42C33.67,67,50,76,64.8,76c8.9,0,10-2,10-5.45V58c0-4,.84-4.8,3.66-4.8,2.08,0,5.64,1,13.94,9C101.9,71.74,103.46,76,108.8,76h14c4,0,6-2,4.85-6s-5.8-9.64-11.81-16.4c-3.27-3.86-8.16-8-9.64-10.09-2.08-2.67-1.49-3.86,0-6.23,0,0,17-24,18.83-32.18Z" fill="#fff"/></svg>
+           </a>
          </li>
          <li>
-           <a href=""><span class="visually-hidden">Facebook</span></a>
+           <a class="social-button" href=""><span class="visually-hidden">Facebook</span>
+             <svg width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"/></svg>
+           </a>
          </li>
          <li>
-           <a href=""><span class="visually-hidden">Instagram</span></a>
+           <a class="social-button" href=""><span class="visually-hidden">Instagram</span>
+             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 0 1 0 12 0 3.4 3.4 0 0 0-.1-1H18v8.5a.47.47 0 0 1-.5.5zM18 4.5a.47.47 0 0 1-.5.5h-2a.47.47 0 0 1-.5-.5v-2a.47.47 0 0 1 .5-.5h2a.47.47 0 0 1 .5.5z" fill="#fff"/></svg>
+           </a>
          </li>
        </ul>
      </section>
 
-     <div>
-       <p>Давайте дружить, это выгодно!</p>
+     <div class="footer-discount">
+       <p class="title">Давайте дружить, это выгодно!</p>
        <p>Скидка 10% для друзей из социальных сетей.</p>
      </div>
 
    </footer>
 
-   <div>
+   <div class="message">
      <h2>Напишите нам</h2>
      <form action="https://echo.htmlacademy.ru/" method="post">
        <label>
@@ -281,12 +290,12 @@
        </label>
        <label>
          <span>Текст письма:</span>
-         <textarea name="text" id="textblock" rows="10" cols="50" placeholder="В свободной форме"></textarea>
+         <textarea name="text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
        </label>
-       <button>Отправить</button>
+       <button class="button-pink">Отправить</button>
      </form>
      <button aria-label="Закрыть"></button>
    </div>
 
-   </body>
+  </body>
 </html>

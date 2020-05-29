@@ -1,0 +1,366 @@
+/*Variables*/
+
+:root {
+  --basic-black: #000000;
+  --basic-gray-darker: #D5D5D5;
+  --basic-gray-dark: #DFDFDF;
+  --basic-gray: #EEEEEE;
+  --basic-green-darker: #00AA62;
+  --basic-green-dark: #00BC6C;
+  --basic-green: #00CA74;
+  --basic-pink-darker: #D7373B;
+  --basic-pink-dark: #E74246;
+  --basic-pink: #FB565A;
+  --basic-yellow-darker: #E5A722;
+  --basic-yellow-dark: #EAB534;
+  --basic-yellow: #EFC84A;
+  --basic-white: #FFFFFF;
+
+  --special: #999999;
+}
+
+/*Global*/
+
+body {
+  min-width: 1160px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: none;
+  background-color: var(--basic-white);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Main navigation*/
+
+.main-navigation { /*нужно ли тут дублировать font-size?*/
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-gray);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/*User navigation*/
+
+.site-navigation a,
+.basket-navigation {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.basket-navigation:hover,
+.basket-navigation:focus {
+  color: var(--basic-pink);
+}
+
+/*Buttons*/
+
+.button-pink {
+  font: inherit;
+  color: var(--basic-white);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--basic-pink);
+  border: none;
+}
+
+.button-pink:hover,
+.button-pink:focus {
+  background-color: var(--basic-pink-dark);
+}
+
+.button-pink:active {
+  color: var(--basic-pink);
+  background-color: var(--basic-pink-darker);
+}
+
+.button-green {
+  color: var(--basic-white);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--basic-green);
+}
+
+.button-green:hover,
+.button-green:focus {
+  background-color: var(--basic-green-dark);
+}
+
+.button-green:active {
+  color: var(--basic-green);
+  background-color: var(--basic-green-darker);
+}
+
+.button-yellow {
+  color: var(--basic-white);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--basic-yellow);
+}
+
+.button-yellow:hover,
+.button-yellow:focus {
+  background-color: var(--basic-yellow-dark);
+}
+
+.button-yellow:active {
+  color: var(--basic-yellow);
+  background-color: var(--basic-yellow-darker);
+}
+
+.button-gray {
+  font: inherit;
+  color: var(--basic-black);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--basic-gray);
+  border: none;
+}
+
+.button-gray:hover,
+.button-gray:focus {
+  background-color: var(--basic-gray-dark);
+}
+
+.button-gray:active {
+  color: var(--special);
+  background-color: var(--basic-gray-darker);
+}
+
+/*Features*/
+
+.features {
+  background-color: var(--basic-gray);
+}
+
+.features strong {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.features a {
+  color: var(--basic-white);
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/*Skills*/
+
+.skills h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+/*About*/
+
+/*History*/
+
+.who-we-are {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.about h3 {
+  text-transform: uppercase;
+}
+
+/*Logotype*/
+
+.title-logotype {
+  text-align: center;
+}
+
+.percent-items {
+  list-style: none;
+}
+
+.percent-items p {
+  line-height: 18px;
+}
+
+.percent-items p.number {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: bold;
+}
+
+.percent-items sup {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+/*Partners*/
+
+.partners ul {
+  list-style: none;
+}
+
+/*Catalog*/
+
+.catalog-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--basic-gray);
+}
+
+.catalog-form h2 {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-sorting {
+  list-style: none;
+}
+
+.catalog-sorting a{
+  font: inherit;
+  color: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/*Catalog pages*/
+
+.catalog-pages ul {
+  list-style: none;
+  text-align: center;
+}
+
+.catalog-pages p {
+  line-height: 18px;
+}
+
+.catalog-pages-title {
+  color: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+/*Map*/
+
+.map {
+  background-color: var(--basic-gray);
+}
+
+.map div {
+  background-color: var(--basic-white);
+}
+
+.map address,
+.map-telephone {
+  font: inherit;
+  color: inherit;
+  line-height: 18px;
+}
+
+.map-adress,
+.map-telephone {
+  color: var(--special);
+}
+
+.map-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*Footer*/
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-social a {
+  color: var(--basic-white);
+  background-color: var(--basic-gray-dark);
+}
+
+.footer-discount p.title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.footer-discount p {
+  line-height: 22px;
+}
+
+/*Social button*/
+
+.social-button {
+  color: inherit;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-pink);
+}
+
+.social-button:active {
+  color: var(--basic-pink);
+  background-color: var(--basic-pink-darker);
+}
+/*Перекрасить иконки соц сетей при активации!*/
+
+/*Message*/
+
+.message h2 {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: bold;s
+}
+
+.message span {
+  line-height: 18px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.message input,
+.message textarea {
+  font: inherit;
+  color: var(--special);
+  border: 2px solid var(--basic-gray-dark);
+}

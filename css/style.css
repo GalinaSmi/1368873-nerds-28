@@ -16,24 +16,24 @@
   --basic-yellow: #EFC84A;
   --basic-white: #FFFFFF;
 
-  --special: #999999;
+  --special-gray-darker: #283136;
+  --special-gray-dark: #666666;
+  --special-gray: #999999;
+
 }
 
 /*Global*/
 
 body {
-  min-width: 1160px;
+  min-width: 1200px;
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px
+  line-height: 24px;
   font-weight: 400;
   color: var(--basic-black);
-  text-transform: none;
   background-color: var(--basic-white);
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -57,6 +57,8 @@ img {
 
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*User navigation*/
@@ -75,7 +77,7 @@ img {
 
 /*Buttons*/
 
-.button-pink {
+.button {
   font: inherit;
   color: var(--basic-white);
   text-align: center;
@@ -83,8 +85,11 @@ img {
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  background-color: var(--basic-pink);
   border: none;
+}
+
+.button-pink {
+  background-color: var(--basic-pink);
 }
 
 .button-pink:hover,
@@ -98,12 +103,6 @@ img {
 }
 
 .button-green {
-  color: var(--basic-white);
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
   background-color: var(--basic-green);
 }
 
@@ -118,12 +117,6 @@ img {
 }
 
 .button-yellow {
-  color: var(--basic-white);
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
   background-color: var(--basic-yellow);
 }
 
@@ -138,15 +131,8 @@ img {
 }
 
 .button-gray {
-  font: inherit;
   color: var(--basic-black);
-  text-align: center;
-  vertical-align: middle;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
   background-color: var(--basic-gray);
-  border: none;
 }
 
 .button-gray:hover,
@@ -155,72 +141,101 @@ img {
 }
 
 .button-gray:active {
-  color: var(--special);
+  color: var(--special-gray);
   background-color: var(--basic-gray-darker);
 }
 
-/*Features*/
+/*Intro*/
 
-.features {
+.intro {
   background-color: var(--basic-gray);
 }
 
-.features strong {
+.intro p {
+  margin: 0;
+}
+
+p.intro-large-text {
+  margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
 }
 
-.features a {
-  color: var(--basic-white);
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 /*Skills*/
 
 .skills h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*About*/
 
 /*History*/
 
-.who-we-are {
+.about p,
+.about ul {
+  margin: 0;
+  padding: 0;
+}
+
+p.who-we-are {
+  margin-bottom: 32px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
 .about h3 {
+  margin-bottom: 23px;
+  line-height: 24px;
   text-transform: uppercase;
 }
 
-/*Logotype*/
-
-.title-logotype {
-  text-align: center;
-}
-
-.percent-items {
+.about ul {
   list-style: none;
 }
 
-.percent-items p {
+/*Features*/
+
+.features-items p
+.features-items h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.features-title {
+  margin-bottom: 31px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.features-items {
+  list-style: none;
+}
+
+.features-items p {
   line-height: 18px;
 }
 
-.percent-items p.number {
+.features-items p.features-number {
+  margin-bottom: 11px;
   font-size: 45px;
   line-height: 64px;
   font-weight: bold;
 }
 
-.percent-items sup {
+.features-items sup {
   font-size: 26px;
   line-height: 40px;
 }
@@ -229,16 +244,26 @@ img {
 
 .partners ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*Catalog*/
 
 .catalog-title {
+  margin-bottom: 108px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   text-align: center;
   background-color: var(--basic-gray);
+}
+
+.catalog-grid p,
+.catalog-features p,
+.catalog-form h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-form h2 {
@@ -259,6 +284,20 @@ img {
   text-transform: uppercase;
 }
 
+.radio-button-label,
+.checkbox {
+  line-height: 19px;
+  color: var(--special-gray-darker);
+}
+
+.catalog-grid {
+  margin-bottom: 46px;
+}
+
+.catalog-features {
+  margin-bottom: 50px;
+}
+
 /*Catalog pages*/
 
 .catalog-pages ul {
@@ -266,18 +305,36 @@ img {
   text-align: center;
 }
 
-.catalog-pages p {
-  line-height: 18px;
+.catalog-pages p,
+h3.catalog-pages-title {
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-pages-title {
+  margin-bottom: 12px;
   color: inherit;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
+.catalog-pages p {
+  margin-bottom: 32px;
+  line-height: 18px;
+  color: var(--special-gray-dark);
+}
+
+.catalog-pages div {
+  background-color: var(--basic-gray);
+}
+
 /*Map*/
+
+.map p {
+  margin: 0;
+  padding: 0;
+}
 
 .map {
   background-color: var(--basic-gray);
@@ -285,6 +342,14 @@ img {
 
 .map div {
   background-color: var(--basic-white);
+}
+
+p.map-title {
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .map address,
@@ -296,17 +361,20 @@ img {
 
 .map-adress,
 .map-telephone {
-  color: var(--special);
+  color: var(--special-gray);
 }
 
-.map-title {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
+.map address {
+  margin-bottom: 37px;
 }
 
 /*Footer*/
+
+.footer-social ul,
+.footer-discount p {
+  margin: 0;
+  padding: 0;
+}
 
 .footer-social ul {
   list-style: none;
@@ -318,6 +386,7 @@ img {
 }
 
 .footer-discount p.title {
+  margin-bottom: 10px;
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
@@ -346,21 +415,24 @@ img {
 
 /*Message*/
 
-.message h2 {
+.popup h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
   font-size: 45px;
   line-height: 53px;
-  font-weight: bold;s
+  font-weight: bold;
 }
 
-.message span {
+.field span {
   line-height: 18px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.message input,
-.message textarea {
+.field input,
+.field textarea {
   font: inherit;
-  color: var(--special);
+  color: var(--special-gray);
   border: 2px solid var(--basic-gray-dark);
 }

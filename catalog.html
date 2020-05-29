@@ -52,7 +52,7 @@
           </div>
         </div>
 
-       <div>
+       <div class="catalog-grid">
          <!--Фильтр (блоки «Сетка», «Особенности»):
          клик по кнопке «Показать» отправляет форму.-->
          <!-- <label name="grid"> -->
@@ -78,7 +78,7 @@
          <!-- </label> -->
        </div>
 
-       <div>
+       <div class="catalog-features">
          <!-- <label name="features"> -->
          <h2>Особенности:</h2>
          <p>
@@ -115,7 +115,7 @@
        </div>
          <!--кнопка «Показать» отвечает за отправку формы
          на адрес https://echo.htmlacademy.ru/-->
-         <button class="button-gray">Показать</button>
+         <button class="button button-gray">Показать</button>
      </form>
 
      <div><!--Блок сортировки и страниц каталога.-->
@@ -151,7 +151,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">Sedona<a></h3>
                <p>Информационный сайт для туристов</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -162,7 +162,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">Pink app<a></h3>
                <p>Продуктовый лендинг приложения для iOS и Android</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -173,7 +173,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">Barbershop<a></h3>
                <p>Сайт салона красоты. Для мужчин, да.</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -184,7 +184,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">Mishka<a></h3>
                <p>Интернет-магазин вязаных игрушек</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -195,7 +195,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">A plus<a></h3>
                <p>Лендинг курсов повышения квалификации</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -206,7 +206,7 @@
              <div>
                <h3><a class="catalog-pages-title" href="">Кваст<a></h3>
                <p>Промо-сайт производителя крафтового кваса</p>
-               <a class="button-pink" href="">9 900 &#8381;</a>
+               <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
            </article>
          </li>
@@ -214,11 +214,11 @@
 
        <div role="navigation" aria-label="Страницы перехода">
        <ul>
-         <li><a class="button-gray" href="">Предыдущая</a></li>
+         <li><a class="button button-gray" href="">Предыдущая</a></li>
          <li><a>1</a></li>
-         <li><a class="button-gray" href="">2</a></li>
-         <li><a class="button-gray" href="">3</a></li>
-         <li><a class="button-gray" href="">Следующая</a></li>
+         <li><a class="button button-gray" href="">2</a></li>
+         <li><a class="button button-gray" href="">3</a></li>
+         <li><a class="button button-gray" href="">Следующая</a></li>
        </ul>
      </div>
      </section>
@@ -241,7 +241,7 @@
        <!--Клик по кнопке «Напишите нам» открывает модальное окно
        с формой обратной связи. Окно позиционируется относительно
        вьюпорта, а не страницы.-->
-       <a class="button-pink" href="">Напишите нам</a>
+       <a class="button button-pink" href="">Напишите нам</a>
        </div>
      <img src="img/map-marker.png" width="100" alt="map marker">
      <img src="img/map.png" width="200" alt="map">
@@ -279,20 +279,20 @@
 
    </footer>
 
-   <div class="message">
+   <div class="popup">
      <h2>Напишите нам</h2>
      <form action="https://echo.htmlacademy.ru/" method="post">
-       <label>
+       <label class="field">
          <span>Ваше имя:</span><input type="text" name="name" placeholder="Имя Фамилия">
        </label>
-       <label>
+       <label class="field">
          <span>Ваш email:</span><input type="email" name="email" placeholder="email@example.com">
        </label>
-       <label>
+       <label class="field">
          <span>Текст письма:</span>
          <textarea name="text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
        </label>
-       <button class="button-pink">Отправить</button>
+       <button class="button button-pink">Отправить</button>
      </form>
      <button aria-label="Закрыть"></button>
    </div>

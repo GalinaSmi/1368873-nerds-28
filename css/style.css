@@ -47,12 +47,15 @@ img {
 
 /*Main navigation*/
 
+.header {
+  background-color: var(--basic-gray);
+}
+
 .main-navigation { /*нужно ли тут дублировать font-size?*/
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
-  background-color: var(--basic-gray);
 }
 
 .site-navigation {
@@ -79,6 +82,9 @@ img {
 
 .button {
   font: inherit;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
   color: var(--basic-white);
   text-align: center;
   vertical-align: middle;
@@ -155,7 +161,7 @@ img {
   margin: 0;
 }
 
-p.intro-large-text {
+p.intro-title {
   margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
@@ -164,7 +170,7 @@ p.intro-large-text {
 
 /*Skills*/
 
-.skills h3 {
+.skills-item-title {
   margin: 0;
   padding: 0;
   margin-bottom: 16px;
@@ -189,7 +195,7 @@ p.intro-large-text {
   padding: 0;
 }
 
-p.who-we-are {
+p.history-title {
   margin-bottom: 32px;
   font-size: 45px;
   line-height: 45px;
@@ -248,7 +254,7 @@ p.who-we-are {
   padding: 0;
 }
 
-/*Catalog*/
+/*Catalog sorting*/
 
 .catalog-title {
   margin-bottom: 108px;
@@ -298,20 +304,22 @@ p.who-we-are {
   margin-bottom: 50px;
 }
 
-/*Catalog pages*/
+/*Catalog cards*/
 
-.catalog-pages ul {
+.catalog-card-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-align: center;
 }
 
-.catalog-pages p,
-h3.catalog-pages-title {
+.catalog-card-text,
+.catalog-card-title {
   margin: 0;
   padding: 0;
 }
 
-.catalog-pages-title {
+.catalog-card-title {
   margin-bottom: 12px;
   color: inherit;
   font-size: 18px;
@@ -319,32 +327,41 @@ h3.catalog-pages-title {
   text-transform: uppercase;
 }
 
-.catalog-pages p {
+.catalog-card-text {
   margin-bottom: 32px;
   line-height: 18px;
   color: var(--special-gray-dark);
 }
 
-.catalog-pages div {
+.catalog-cards div {
   background-color: var(--basic-gray);
+}
+
+/*Catalog navigation*/
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*Map*/
 
-.map p {
+.map-card {
   margin: 0;
   padding: 0;
+  font-style: normal;
 }
 
 .map {
   background-color: var(--basic-gray);
 }
 
-.map div {
+.map-card {
   background-color: var(--basic-white);
 }
 
-p.map-title {
+.map-card-title {
   margin-bottom: 23px;
   font-size: 18px;
   line-height: 30px;
@@ -352,68 +369,63 @@ p.map-title {
   text-transform: uppercase;
 }
 
-.map address,
-.map-telephone {
+.map-card-text,
+.map-card-phone {
   font: inherit;
   color: inherit;
   line-height: 18px;
-}
-
-.map-adress,
-.map-telephone {
   color: var(--special-gray);
 }
 
-.map address {
+.map-card-phone {
   margin-bottom: 37px;
 }
 
 /*Footer*/
 
-.footer-social ul,
-.footer-discount p {
+.social-list,
+.footer-discount,
+.social-link {
   margin: 0;
   padding: 0;
 }
 
-.footer-social ul {
-  list-style: none;
-}
-
-.footer-social a {
-  color: var(--basic-white);
-  background-color: var(--basic-gray-dark);
-}
-
-.footer-discount p.title {
+.footer-discount-title {
   margin-bottom: 10px;
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
 }
 
-.footer-discount p {
-  line-height: 22px;
-}
-
 /*Social button*/
 
-.social-button {
-  color: inherit;
+.social-list {
+  list-style: none;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-link {
+  color: inherit;
+  color: var(--basic-white);
+  background-color: var(--basic-gray-dark);
+
+}
+
+.social-link:hover,
+.social-link:focus {
   background-color: var(--basic-pink);
 }
 
-.social-button:active {
+.social-link:active {
   color: var(--basic-pink);
   background-color: var(--basic-pink-darker);
 }
 /*Перекрасить иконки соц сетей при активации!*/
 
 /*Message*/
+
+.popup {
+  display: none;
+}
 
 .popup h2 {
   margin: 0;

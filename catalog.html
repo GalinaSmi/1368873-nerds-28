@@ -29,86 +29,86 @@
 
      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
      <form class="catalog-form" action="https://echo.htmlacademy.ru/" method="get">
+       <h2 class="catalog-subtitle">Стоимость:</h2><!--Фильтр стоимости-->
        <!--Блок «Стоимость»: при взаимодействии с любым
        из маркеров в качестве указателя допускается использовать
        любой подходящий тип курсора. Делать маркеры интерактивными
        не обязательно, стоимость меняться не должна.-->
-       <div class="range">
-         <h2>Стоимость:</h2><!--Фильтр стоимости-->
-         <div>
-           <button type="button" aria-label="минимальная цена"></button>
-           <button type="button" aria-label="максимальная цена"></button>
+       <div class="catalog-filter">
+         <div class="catalog-filter-buttons">
+           <button class="catalog-filter-button" type="button" aria-label="минимальная цена"></button>
+           <button class="catalog-filter-button" type="button" aria-label="максимальная цена"></button>
            <div></div></div></div>
-        <div>
-          <div>
-            <div>
-              <label for="min-priсe" class="visually-hidden">От</label>
-              <input id="min-priсe" value="0">
-            </div>
-            <div>
-              <label for="max-price" class="visually-hidden">До</label>
-              <input id="max-price" value="15 000">
-            </div>
-          </div>
-        </div>
+           <div>
+             <div>
+               <div class="catalog-filter-price">
+                 <label class="catalog-filter-price-label" for="min-priсe" class="visually-hidden">От</label>
+                 <input class="catalog-filter-price-input" id="min-priсe" value="0">
+               </div>
+               <div class="catalog-filter-price">
+                 <label class="catalog-filter-price-label" for="max-price" class="visually-hidden">До</label>
+                 <input class="catalog-filter-price-input" id="max-price" value="15 000">
+               </div>
+             </div>
+           </div>
 
-       <div class="catalog-grid">
+       <div class="catalog-filter">
          <!--Фильтр (блоки «Сетка», «Особенности»):
          клик по кнопке «Показать» отправляет форму.-->
          <!-- <label name="grid"> -->
-           <h2>Сетка:</h2>
+           <h2 class="catalog-subtitle">Сетка:</h2>
            <p>
-             <label class="radio-button">
-               <input class="radio-button-input" type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
-               <span class="radio-button-label">Адаптивная</span>
+             <label class="catalog-radio-button">
+               <input class="catalog-radio-button-input" type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
+               <span class="catalog-radio-button-label">Адаптивная</span>
              </label>
            </p>
            <p>
-             <label class="radio-button">
-               <input class="radio-button-input" type="radio" name="grid" id="fixy" value="fixy">
-               <span class="radio-button-label">Фиксированная</span>
+             <label class="catalog-radio-button">
+               <input class="catalog-radio-button-input" type="radio" name="grid" id="fixy" value="fixy">
+               <span class="catalog-radio-button-label">Фиксированная</span>
              </label>
            </p>
            <p>
-             <label class="radio-button">
-               <input class="radio-button-input" type="radio" name="grid" id="rubber" value="rubber">
-               <span class="radio-button-label">Резиновая</span>
+             <label class="catalog-radio-button">
+               <input class="catalog-radio-button-input" type="radio" name="grid" id="rubber" value="rubber">
+               <span class="catalog-radio-button-label">Резиновая</span>
              </label>
            </p>
          <!-- </label> -->
        </div>
 
-       <div class="catalog-features">
+       <div class="catalog-filter">
          <!-- <label name="features"> -->
-         <h2>Особенности:</h2>
+         <h2 class="catalog-subtitle">Особенности:</h2>
          <p>
-           <label class="checkbox">
-             <input class="checkbox-input" type="checkbox" name="features" id="slider" value="slider">
-             <span class="checkbox-label">Слайдер</span>
+           <label class="catalog-checkbox">
+             <input class="catalog-checkbox-input" type="checkbox" name="features" id="slider" value="slider">
+             <span class="catalog-checkbox-label">Слайдер</span>
            </label>
          </p>
          <p>
-           <label class="checkbox">
-             <input class="checkbox-input" type="checkbox" name="features" id="benefits" value="benefits">
-             <span class="checkbox-label">Блок преимуществ</span>
+           <label class="catalog-checkbox">
+             <input class="catalog-checkbox-input" type="checkbox" name="features" id="benefits" value="benefits">
+             <span class="catalog-checkbox-label">Блок преимуществ</span>
            </label>
          </p>
          <p>
-           <label class="checkbox">
-             <input class="checkbox-input" type="checkbox" ame="features" id="news" value="news">
-             <span class="checkbox-label">Новости</span>
+           <label class="catalog-checkbox">
+             <input class="catalog-checkbox-input" type="checkbox" ame="features" id="news" value="news">
+             <span class="catalog-checkbox-label">Новости</span>
            </label>
          </p>
          <p>
-           <label class="checkbox">
-             <input class="checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
-             <span class="checkbox-label">Галерея</span>
+           <label class="catalog-checkbox">
+             <input class="catalog-checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
+             <span class="catalog-checkbox-label">Галерея</span>
            </label>
          </p>
          <p>
-           <label class="checkbox">
-             <input class="checkbox-input" type="checkbox" name="features" id="basket" value="basket">
-             <span class="checkbox-label">Корзина</span>
+           <label class="catalog-checkbox">
+             <input class="catalog-checkbox-input" type="checkbox" name="features" id="basket" value="basket">
+             <span class="catalog-checkbox-label">Корзина</span>
            </label>
          </p>
          <!-- </label> -->
@@ -119,23 +119,22 @@
      </form>
 
      <div><!--Блок сортировки и страниц каталога.-->
-
-       <div>
-       <h2>Сортировать:</h2>
-       <ul class="catalog-sorting">
-         <li><a href="">по цене</a></li>
-         <li><a href="">по типу</a></li>
-         <li><a href="">по названию</a></li>
-         <li>
+       <div class="catalog-sorting">
+       <h2 class="catalog-subtitle">Сортировать:</h2>
+       <ul class="catalog-sorting-list">
+         <li class="catalog-sorting-item"><a href="">по цене</a></li>
+         <li class="catalog-sorting-item"><a href="">по типу</a></li>
+         <li class="catalog-sorting-item"><a href="">по названию</a></li>
+         <li class="catalog-sorting-item">
            <a href=""> <span class="visually-hidden">По возрастанию</span></a>
          </li>
-         <li>
+         <li class="catalog-sorting-item">
            <a href=""> <span class="visually-hidden">По уменьшению</span></a>
          </li>
        </ul>
      </div>
 
-     <section class="catalog-cards">
+     <section class="catalog">
        <h2 class="visually-hidden">Каталог сайтов</h2>
        <!--Карточка товара: название товара является ссылкой,
        клик по нему открывает модальное окно с демонстрацией товара.
@@ -143,12 +142,12 @@
        текстом блок с текстом не должен вылезать за границы изображения,
        кнопка покупки не должна пропадать. Количество товаров в правом
        блоке может быть любым, оно не должно ломать страницу.-->
-       <ul class="catalog-card-list">
+       <ul class="catalog-list">
          <li>
            <article class="catalog-card">
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">Sedona<a></h3>
                <p class="catalog-card-text">Информационный сайт для туристов</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -157,9 +156,9 @@
          </li>
          <li>
            <article class="catalog-card">
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">Pink app<a></h3>
                <p>Продуктовый лендинг приложения для iOS и Android</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -168,9 +167,9 @@
          </li>
          <li>
            <article class="catalog-card">
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">Barbershop<a></h3>
                <p>Сайт салона красоты. Для мужчин, да.</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -179,9 +178,9 @@
          </li>
          <li>
            <article class="catalog-card">
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">Mishka<a></h3>
                <p>Интернет-магазин вязаных игрушек</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -190,9 +189,9 @@
          </li>
          <li>
            <article>
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">A plus<a></h3>
                <p>Лендинг курсов повышения квалификации</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -201,9 +200,9 @@
          </li>
          <li>
            <article class="catalog-card">
-             <div><span></span><span></span><span></span></div>
+             <div class="catalog-card-service-buttons"><span></span><span></span><span></span></div>
              <a href=""><img src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a>
-             <div>
+             <div class="catalog-card-personal">
                <h3><a class="catalog-card-title" href="">Кваст<a></h3>
                <p>Промо-сайт производителя крафтового кваса</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
@@ -235,7 +234,7 @@
            <p class="map-card-title">Nёrds design studio</p>
            <address class="map-card-text">191186, Санкт-Петербург,<br>
            ул. Б. Конюшенная, д. 19/8</address>
-           <p><a class="map-card-phone" href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
+           <p><a class="map-card-text" href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
        <!--Клик по кнопке «Напишите нам» открывает модальное окно
        с формой обратной связи. Окно позиционируется относительно
        вьюпорта, а не страницы.-->
@@ -270,29 +269,29 @@
        </ul>
      </section>
 
-     <div class="footer-discount">
-       <p class="footer-discount-title">Давайте дружить, это выгодно!</p>
-       <p class="footer-discount-text">Скидка 10% для друзей из социальных сетей.</p>
+     <div class="main-footer-message">
+       <p class="main-footer-title">Давайте дружить, это выгодно!</p>
+       <p class="main-footer-text">Скидка 10% для друзей из социальных сетей.</p>
      </div>
 
    </footer>
 
    <div class="popup">
-     <h2>Напишите нам</h2>
+     <h2 class="popup-title">Напишите нам</h2>
      <form action="https://echo.htmlacademy.ru/" method="post">
-       <label class="field">
+       <label class="popup-field">
          <span>Ваше имя:</span><input type="text" name="name" placeholder="Имя Фамилия">
        </label>
-       <label class="field">
+       <label class="popup-field">
          <span>Ваш email:</span><input type="email" name="email" placeholder="email@example.com">
        </label>
-       <label class="field">
+       <label class="popup-field">
          <span>Текст письма:</span>
          <textarea name="text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
        </label>
        <button class="button button-pink">Отправить</button>
      </form>
-     <button aria-label="Закрыть"></button>
+     <button class="button-close" aria-label="Закрыть"></button>
    </div>
 
   </body>

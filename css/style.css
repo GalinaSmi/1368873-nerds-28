@@ -161,7 +161,7 @@ img {
   margin: 0;
 }
 
-p.intro-title {
+p.slider-item-title {
   margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
@@ -214,8 +214,9 @@ p.history-title {
 
 /*Features*/
 
-.features-items p
-.features-items h3 {
+.features-title,
+.features-item,
+.features-description {
   margin: 0;
   padding: 0;
 }
@@ -226,29 +227,29 @@ p.history-title {
   text-align: center;
 }
 
-.features-items {
+.features-list {
   list-style: none;
 }
 
-.features-items p {
+.features-description {
   line-height: 18px;
 }
 
-.features-items p.features-number {
+.features-item {
   margin-bottom: 11px;
   font-size: 45px;
   line-height: 64px;
   font-weight: bold;
 }
 
-.features-items sup {
+.features-list sup {
   font-size: 26px;
   line-height: 40px;
 }
 
 /*Partners*/
 
-.partners ul {
+.partners-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -265,24 +266,23 @@ p.history-title {
   background-color: var(--basic-gray);
 }
 
-.catalog-grid p,
-.catalog-features p,
+.catalog-filter p,
 .catalog-form h2 {
   margin: 0;
   padding: 0;
 }
 
-.catalog-form h2 {
+.catalog-subtitle {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.catalog-sorting {
+.catalog-sorting-list {
   list-style: none;
 }
 
-.catalog-sorting a{
+.catalog-sorting-item a {
   font: inherit;
   color: inherit;
   font-size: 14px;
@@ -290,23 +290,15 @@ p.history-title {
   text-transform: uppercase;
 }
 
-.radio-button-label,
-.checkbox {
+.catalog-radio-button-label,
+.catalog-checkbox {
   line-height: 19px;
   color: var(--special-gray-darker);
 }
 
-.catalog-grid {
-  margin-bottom: 46px;
-}
-
-.catalog-features {
-  margin-bottom: 50px;
-}
-
 /*Catalog cards*/
 
-.catalog-card-list {
+.catalog-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -333,7 +325,7 @@ p.history-title {
   color: var(--special-gray-dark);
 }
 
-.catalog-cards div {
+.catalog div {
   background-color: var(--basic-gray);
 }
 
@@ -369,28 +361,24 @@ p.history-title {
   text-transform: uppercase;
 }
 
-.map-card-text,
-.map-card-phone {
+.map-card-text {
   font: inherit;
   color: inherit;
+  margin-bottom: 37px;
   line-height: 18px;
   color: var(--special-gray);
-}
-
-.map-card-phone {
-  margin-bottom: 37px;
 }
 
 /*Footer*/
 
 .social-list,
-.footer-discount,
-.social-link {
+.social-link,
+.main-footer-message {
   margin: 0;
   padding: 0;
 }
 
-.footer-discount-title {
+.main-footer-title {
   margin-bottom: 10px;
   font-size: 36px;
   line-height: 36px;
@@ -427,7 +415,7 @@ p.history-title {
   display: none;
 }
 
-.popup h2 {
+.popup-title {
   margin: 0;
   padding: 0;
   margin-bottom: 37px;
@@ -436,14 +424,14 @@ p.history-title {
   font-weight: bold;
 }
 
-.field span {
+.popup-field span {
   line-height: 18px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.field input,
-.field textarea {
+.popup-field input,
+.popup-field textarea {
   font: inherit;
   color: var(--special-gray);
   border: 2px solid var(--basic-gray-dark);

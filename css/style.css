@@ -67,14 +67,14 @@ img {
 /*User navigation*/
 
 .site-navigation a,
-.basket-navigation {
+.basket {
   color: var(--basic-black);
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus,
-.basket-navigation:hover,
-.basket-navigation:focus {
+.basket:hover,
+.basket:focus {
   color: var(--basic-pink);
 }
 
@@ -170,7 +170,7 @@ p.slider-item-title {
 
 /*Skills*/
 
-.skills-item-title {
+.skills-card-item-title {
   margin: 0;
   padding: 0;
   margin-bottom: 16px;
@@ -257,7 +257,7 @@ p.history-title {
 
 /*Catalog sorting*/
 
-.catalog-title {
+.page-title {
   margin-bottom: 108px;
   font-size: 55px;
   line-height: 55px;
@@ -266,23 +266,25 @@ p.history-title {
   background-color: var(--basic-gray);
 }
 
-.catalog-filter p,
-.catalog-form h2 {
+.filter-fieldset p,
+.filter-legend {
   margin: 0;
   padding: 0;
 }
 
-.catalog-subtitle {
+.filter-legend,
+.sorting-subtitle {
   font-size: 18px;
   line-height: 30px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
-.catalog-sorting-list {
+.sorting-list {
   list-style: none;
 }
 
-.catalog-sorting-item a {
+.sorting-item a {
   font: inherit;
   color: inherit;
   font-size: 14px;
@@ -290,8 +292,8 @@ p.history-title {
   text-transform: uppercase;
 }
 
-.catalog-radio-button-label,
-.catalog-checkbox {
+.radio-button-label,
+.checkbox {
   line-height: 19px;
   color: var(--special-gray-darker);
 }
@@ -311,7 +313,8 @@ p.history-title {
   padding: 0;
 }
 
-.catalog-card-title {
+.catalog-card-title,
+.catalog-card-link {
   margin-bottom: 12px;
   color: inherit;
   font-size: 18px;

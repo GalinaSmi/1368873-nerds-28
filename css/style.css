@@ -36,6 +36,10 @@ body {
   background-color: var(--basic-white);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
@@ -51,12 +55,13 @@ img {
   background-color: var(--basic-gray);
 }
 
-.main-navigation { /*нужно ли тут дублировать font-size?*/
-  font-size: 16px;
+.main-navigation {
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
 }
+
+/*User navigation*/
 
 .site-navigation {
   list-style: none;
@@ -64,15 +69,30 @@ img {
   padding: 0;
 }
 
-/*User navigation*/
+.site-navigation-link {
+  font: inherit;
+  color: inherit;
+}
 
-.site-navigation a,
+.site-navigation-link {
+  color: var(--basic-black);
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  color: var(--basic-pink);
+}
+
+.basket {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .basket {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
 .basket:hover,
 .basket:focus {
   color: var(--basic-pink);
@@ -157,11 +177,12 @@ img {
   background-color: var(--basic-gray);
 }
 
-.intro p {
+.slider-item-title,
+.slider-item-text {
   margin: 0;
 }
 
-p.slider-item-title {
+.slider-item-title {
   margin-bottom: 25px;
   font-size: 55px;
   line-height: 55px;
@@ -170,7 +191,7 @@ p.slider-item-title {
 
 /*Skills*/
 
-.skills-card-item-title {
+.skills-card-title {
   margin: 0;
   padding: 0;
   margin-bottom: 16px;
@@ -179,7 +200,7 @@ p.slider-item-title {
   text-transform: uppercase;
 }
 
-.skills ul {
+.skills-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -189,34 +210,38 @@ p.slider-item-title {
 
 /*History*/
 
-.about p,
-.about ul {
+.history-title,
+.history-text,
+.history-item {
   margin: 0;
   padding: 0;
 }
 
-p.history-title {
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-title {
   margin-bottom: 32px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
-.about h3 {
+.history-subtitle {
   margin-bottom: 23px;
   line-height: 24px;
   text-transform: uppercase;
-}
-
-.about ul {
-  list-style: none;
 }
 
 /*Features*/
 
 .features-title,
 .features-item,
-.features-description {
+.features-description,
+.features-percent {
   margin: 0;
   padding: 0;
 }
@@ -225,9 +250,12 @@ p.history-title {
   margin-bottom: 31px;
   line-height: 45px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .features-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -235,7 +263,7 @@ p.history-title {
   line-height: 18px;
 }
 
-.features-item {
+.features-percent {
   margin-bottom: 11px;
   font-size: 45px;
   line-height: 64px;
@@ -272,11 +300,19 @@ p.history-title {
   padding: 0;
 }
 
-.filter-legend,
-.sorting-subtitle {
+.filter-legend {
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
+  font-color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sorting-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  font-color: var(--basic-black);
   text-transform: uppercase;
 }
 
@@ -284,7 +320,7 @@ p.history-title {
   list-style: none;
 }
 
-.sorting-item a {
+.sorting-item-link {
   font: inherit;
   color: inherit;
   font-size: 14px;
@@ -293,7 +329,7 @@ p.history-title {
 }
 
 .radio-button-label,
-.checkbox {
+.checkbox-label {
   line-height: 19px;
   color: var(--special-gray-darker);
 }
@@ -313,13 +349,15 @@ p.history-title {
   padding: 0;
 }
 
-.catalog-card-title,
-.catalog-card-link {
+.catalog-card-title {
   margin-bottom: 12px;
-  color: inherit;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.catalog-card-title-link {
+  color: inherit;
 }
 
 .catalog-card-text {
@@ -328,7 +366,7 @@ p.history-title {
   color: var(--special-gray-dark);
 }
 
-.catalog div {
+.catalog-card-content {
   background-color: var(--basic-gray);
 }
 
@@ -374,8 +412,6 @@ p.history-title {
 
 /*Footer*/
 
-.social-list,
-.social-link,
 .main-footer-message {
   margin: 0;
   padding: 0;
@@ -389,6 +425,12 @@ p.history-title {
 }
 
 /*Social button*/
+
+.social-list,
+.social-link {
+  margin: 0;
+  padding: 0;
+}
 
 .social-list {
   list-style: none;
@@ -415,7 +457,7 @@ p.history-title {
 /*Message*/
 
 .popup {
-  display: none;
+  /*display: none;*/
 }
 
 .popup-title {
@@ -427,14 +469,14 @@ p.history-title {
   font-weight: bold;
 }
 
-.popup-field span {
+.field-label {
   line-height: 18px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.popup-field input,
-.popup-field textarea {
+.field-input,
+.field-textarea {
   font: inherit;
   color: var(--special-gray);
   border: 2px solid var(--basic-gray-dark);

@@ -12,14 +12,14 @@
 
    <header class="header">
        <nav class="main-navigation">
-         <a href="index.html" title="На главную">
-           <img src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
+         <a class="logo" href="index.html" title="На главную">
+           <img class="logo-img" src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
          </a>
          <ul class="site-navigation">
-           <li><a href="">Студия</a></li>
-           <li><a href="">Клиенты</a></li>
-           <li><a>Магазин</a></li>
-           <li><a href="">Контакты</a></li>
+           <li class="site-navigation-items"><a class="site-navigation-link" href="">Студия</a></li>
+           <li class="site-navigation-items"><a class="site-navigation-link" href="">Клиенты</a></li>
+           <li class="site-navigation-items"><a class="site-navigation-link">Магазин</a></li>
+           <li class="site-navigation-items"><a class="site-navigation-link" href="">Контакты</a></li>
         </ul>
         <a class="basket" href="">Корзина</a>
        </nav>
@@ -103,7 +103,7 @@
          <p>
            <label class="checkbox">
              <input class="checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
-             <span class="catalog-checkbox-label">Галерея</span>
+             <span class="checkbox-label">Галерея</span>
            </label>
          </p>
          <p>
@@ -120,16 +120,16 @@
 
      <div class="catalog-main-content"><!--Блок сортировки и страниц каталога.-->
        <div class="sorting">
-       <h2 class="sorting-subtitle">Сортировать:</h2>
+       <h2 class="sorting-title">Сортировать:</h2>
        <ul class="sorting-list">
-         <li class="sorting-item"><a href="">по цене</a></li>
-         <li class="sorting-item"><a href="">по типу</a></li>
-         <li class="sorting-item"><a href="">по названию</a></li>
+         <li class="sorting-item"><a class="sorting-item-link" href="">по цене</a></li>
+         <li class="sorting-item"><a class="sorting-item-link" href="">по типу</a></li>
+         <li class="sorting-item"><a class="sorting-item-link" href="">по названию</a></li>
          <li class="sorting-item">
-           <a href=""> <span class="visually-hidden">По возрастанию</span></a>
+           <a class="sorting-item-link" href=""> <span class="visually-hidden">По возрастанию</span></a>
          </li>
          <li class="sorting-item">
-           <a href=""> <span class="visually-hidden">По уменьшению</span></a>
+           <a class="sorting-item-link" href=""> <span class="visually-hidden">По уменьшению</span></a>
          </li>
        </ul>
      </div>
@@ -148,7 +148,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">Sedona</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Sedona</a></h3>
                <p class="catalog-card-text">Информационный сайт для туристов</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -159,7 +159,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">Pink app</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Pink app</a></h3>
                <p class="catalog-card-text">Продуктовый лендинг приложения для iOS и Android</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -170,7 +170,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">Barbershop</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Barbershop</a></h3>
                <p class="catalog-card-text">Сайт салона красоты. Для мужчин, да.</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -181,7 +181,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">Mishka</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Mishka</a></h3>
                <p class="catalog-card-text">Интернет-магазин вязаных игрушек</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -192,7 +192,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">A plus</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">A plus</a></h3>
                <p class="catalog-card-text">Лендинг курсов повышения квалификации</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -203,7 +203,7 @@
              <div class="catalog-card-nav"><span></span><span></span><span></span></div>
              <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a>
              <div class="catalog-card-content">
-               <h3 class="catalog-card-title"><a class="catalog-card-link" href="">Кваст</a></h3>
+               <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Кваст</a></h3>
                <p class="catalog-card-text">Промо-сайт производителя крафтового кваса</p>
                <a class="button button-pink" href="">9 900 &#8381;</a>
              </div>
@@ -211,7 +211,7 @@
          </li>
        </ul>
 
-       <div role="navigation" aria-label="Страницы перехода">
+       <div class="navigation-pages" role="navigation" aria-label="Страницы перехода">
        <ul class="navigation-list">
          <li class="navigation-item"><a class="button button-gray navigation-link" href="">Предыдущая</a></li>
          <li class="navigation-item"><a>1</a></li>
@@ -240,8 +240,8 @@
        вьюпорта, а не страницы.-->
        <a class="button button-pink" href="">Напишите нам</a>
        </div>
-     <img src="img/map-marker.png" width="100" alt="map marker">
-     <img src="img/map.png" width="200" alt="map">
+       <img class="map-marker" src="img/map-marker.png" width="100" alt="map marker">
+       <img class="map-img" src="img/map.png" width="200" alt="map">
    </section>
 
    </main>

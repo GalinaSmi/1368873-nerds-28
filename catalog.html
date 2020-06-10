@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Сайт дизайн-студии Нёрдс</title>
@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
+  <body class="page-body">
 
-   <header class="header">
-       <nav class="main-navigation">
-         <a class="logo" href="index.html" title="На главную">
-           <img class="logo-img" src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
-         </a>
-         <ul class="site-navigation">
-           <li class="site-navigation-items"><a class="site-navigation-link" href="">Студия</a></li>
-           <li class="site-navigation-items"><a class="site-navigation-link" href="">Клиенты</a></li>
-           <li class="site-navigation-items"><a class="site-navigation-link">Магазин</a></li>
-           <li class="site-navigation-items"><a class="site-navigation-link" href="">Контакты</a></li>
-        </ul>
-        <a class="basket" href="">Корзина</a>
-       </nav>
-   </header>
+    <header class="header">
+      <div class="container">
+          <nav class="main-navigation">
+            <a class="logo" href="index.html" title="На главную">
+              <img class="logo-img" src="img/nerds-logo.svg" width="100" alt="логотип НЁРДС">
+            </a>
+            <ul class="site-navigation">
+              <li class="site-navigation-items"><a class="site-navigation-link" href="">Студия</a></li>
+              <li class="site-navigation-items"><a class="site-navigation-link" href="">Клиенты</a></li>
+              <li class="site-navigation-items"><a class="site-navigation-link">Магазин</a></li>
+              <li class="site-navigation-items"><a class="site-navigation-link" href="">Контакты</a></li>
+            </ul>
+            <a class="basket" href="">Корзина</a>
+          </nav>
+      </div>
+    </header>
 
    <main>
 
@@ -225,29 +227,31 @@
    </div>
 
    <section class="map">
-     <!--Блок карты: интерактивная карта. Высота карты постоянная,
-     ширина подстраивается под ширину вьюпорта, но не уже контентной
-     ширины макета. На карте размещён маркер. Центр карты соответствует
-     центру блока в макете. Допустимо использовать как стандартный,
-     так и кастомный маркер. Реализация по желанию.-->
-       <div class="map-card">
-           <p class="map-card-title">Nёrds design studio</p>
-           <address class="map-card-text">191186, Санкт-Петербург,<br>
-           ул. Б. Конюшенная, д. 19/8</address>
-           <p><a class="map-card-text" href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
-       <!--Клик по кнопке «Напишите нам» открывает модальное окно
-       с формой обратной связи. Окно позиционируется относительно
-       вьюпорта, а не страницы.-->
-       <a class="button button-pink" href="">Напишите нам</a>
-       </div>
-       <img class="map-marker" src="img/map-marker.png" width="100" alt="map marker">
-       <img class="map-img" src="img/map.png" width="200" alt="map">
+     <div class="container">
+       <!--Блок карты: интерактивная карта. Высота карты постоянная,
+       ширина подстраивается под ширину вьюпорта, но не уже контентной
+       ширины макета. На карте размещён маркер. Центр карты соответствует
+       центру блока в макете. Допустимо использовать как стандартный,
+       так и кастомный маркер. Реализация по желанию.-->
+         <div class="map-card">
+             <p class="map-card-title">Nёrds design studio</p>
+             <address class="map-card-text">191186, Санкт-Петербург,<br>
+             ул. Б. Конюшенная, д. 19/8</address>
+             <p><a class="map-card-text" href="tel:+78122757575">тел: +7 (812) 275-75-75</a></p>
+         <!--Клик по кнопке «Напишите нам» открывает модальное окно
+         с формой обратной связи. Окно позиционируется относительно
+         вьюпорта, а не страницы.-->
+         <a class="button button-pink" href="">Напишите нам</a>
+         </div>
+     </div>
+     <img class="map-marker" src="img/map-marker.png" width="100" alt="map marker">
+     <img class="map-img" src="img/map.png" width="200" alt="map">
    </section>
 
-   </main>
+ </main>
 
-   <footer class="main-footer">
-
+ <footer class="main-footer">
+   <div class="container">
      <section class="social">
        <h2 class="visually-hidden">Наши социальные сети</h2>
        <ul class="social-list">
@@ -273,28 +277,28 @@
        <p class="main-footer-title">Давайте дружить, это выгодно!</p>
        <p class="main-footer-text">Скидка 10% для друзей из социальных сетей.</p>
      </div>
-
-   </footer>
-
-   <div class="popup">
-     <h2 class="popup-title">Напишите нам</h2>
-     <form action="https://echo.htmlacademy.ru/" method="post">
-       <label class="field">
-         <span class="field-label">Ваше имя:</span>
-         <input class="field-input" type="text" name="name" placeholder="Имя Фамилия">
-       </label>
-       <label class="field">
-         <span class="field-label">Ваш email:</span>
-         <input class="field-input" type="email" name="email" placeholder="email@example.com">
-       </label>
-       <label class="field">
-         <span class="field-label">Текст письма:</span>
-         <textarea class="field-textarea" name="text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
-       </label>
-       <button class="button button-pink">Отправить</button>
-     </form>
-     <button class="button-close" aria-label="Закрыть"></button>
    </div>
+ </footer>
 
-  </body>
+ <div class="popup">
+   <h2 class="popup-title">Напишите нам</h2>
+   <form action="https://echo.htmlacademy.ru/" method="post">
+     <label class="field">
+       <span class="field-label">Ваше имя:</span>
+       <input class="field-input" type="text" name="name" placeholder="Имя Фамилия">
+     </label>
+     <label class="field">
+       <span class="field-label">Ваш email:</span>
+       <input class="field-input" type="email" name="email" placeholder="email@example.com">
+     </label>
+     <label class="field">
+       <span class="field-label">Текст письма:</span>
+       <textarea class="field-textarea" name="text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
+     </label>
+     <button class="button button-pink">Отправить</button>
+   </form>
+   <button class="button-close" aria-label="Закрыть"></button>
+ </div>
+
+</body>
 </html>

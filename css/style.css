@@ -79,9 +79,8 @@ input[type="radio"].visually-hidden {
 
 .container {
   width: 1200px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /*Main navigation*/
@@ -572,6 +571,16 @@ input[type="radio"].visually-hidden {
 
 /*Catalog page*/
 
+.page-catalog {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-gap: 140px;
+
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+}
+
 .page-title {
   margin: 0;
   margin-bottom: 55px;
@@ -720,6 +729,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 30px;
 }
 
+.catalog-card:nth-child(2n) {
+  margin-right: 0;
+}
+
 .catalog-card-img {
   width: 358px;
   height: 578px;
@@ -755,6 +768,7 @@ input[type="radio"].visually-hidden {
 /*Catalog navigation*/
 
 .navigation-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;

@@ -33,208 +33,210 @@
 
      <h1 class="page-title">Магазин готовых шаблонов</h1>
 
-     <div class="container">
+     <div class="page-catalog">
+       <div class="container">
 
-       <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
-         <fieldset class="filters-fieldset">
-           <legend class="filter-legend">Стоимость:</legend>
-           <!--Фильтр стоимости-->
-           <!--Блок «Стоимость»: при взаимодействии с любым
-           из маркеров в качестве указателя допускается использовать
-           любой подходящий тип курсора. Делать маркеры интерактивными
-           не обязательно, стоимость меняться не должна.-->
-           <div class="range">
-             <div class="range-controls">
-               <div class="range-scale">
-                 <div class="range-bar" style="width: 30%; margin-left: 20%"></div>
-                 <div class="range-toggle range-toggle-min" tabindex="0" style="left: 20%" aria-label="минимальная цена"></div>
-                 <div class="range-toggle range-toggle-max" tabindex="0" style="left: 50%" aria-label="максимальная цена"></div>
+         <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
+           <fieldset class="filters-fieldset">
+             <legend class="filter-legend">Стоимость:</legend>
+             <!--Фильтр стоимости-->
+             <!--Блок «Стоимость»: при взаимодействии с любым
+             из маркеров в качестве указателя допускается использовать
+             любой подходящий тип курсора. Делать маркеры интерактивными
+             не обязательно, стоимость меняться не должна.-->
+             <div class="range">
+               <div class="range-controls">
+                 <div class="range-scale">
+                   <div class="range-bar" style="width: 30%; margin-left: 20%"></div>
+                   <div class="range-toggle range-toggle-min" tabindex="0" style="left: 20%" aria-label="минимальная цена"></div>
+                   <div class="range-toggle range-toggle-max" tabindex="0" style="left: 50%" aria-label="максимальная цена"></div>
+                 </div>
+               </div>
+               <div class="range-progress">
+                 <div class="range-progress-bar"></div>
+               </div>
+               <div class="range-fields-wrap">
+                 <div class="range-field">
+                   <label class="range-field-label">
+                     От<input class="range-field-input" type="number" value="0">
+                   </label>
+                   <label class="range-field-label">
+                     До<input class="range-field-input" type="number" value="15000">
+                   </label>
+                 </div>
                </div>
              </div>
-             <div class="range-progress">
-               <div class="range-progress-bar"></div>
-             </div>
-             <div class="range-fields-wrap">
-               <div class="range-field">
-                 <label class="range-field-label">
-                   От<input class="range-field-input" type="number" value="0">
+           </fieldset>
+
+           <fieldset class="filters-fieldset">
+             <!--Фильтр (блоки «Сетка», «Особенности»):
+             клик по кнопке «Показать» отправляет форму.-->
+             <!-- <label name="grid"> -->
+               <legend class="filter-legend">Сетка:</legend>
+               <p>
+                 <label class="radio-button">
+                   <input class="radio-button-input" type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
+                   <span class="radio-button-label">Адаптивная</span>
                  </label>
-                 <label class="range-field-label">
-                   До<input class="range-field-input" type="number" value="15000">
+               </p>
+               <p>
+                 <label class="radio-button">
+                   <input class="radio-button-input" type="radio" name="grid" id="fixy" value="fixy">
+                   <span class="radio-button-label">Фиксированная</span>
                  </label>
-               </div>
-             </div>
-           </div>
-         </fieldset>
+               </p>
+               <p>
+                 <label class="radio-button">
+                   <input class="radio-button-input" type="radio" name="grid" id="rubber" value="rubber">
+                   <span class="radio-button-label">Резиновая</span>
+                 </label>
+               </p>
+           </fieldset>
 
-         <fieldset class="filters-fieldset">
-           <!--Фильтр (блоки «Сетка», «Особенности»):
-           клик по кнопке «Показать» отправляет форму.-->
-           <!-- <label name="grid"> -->
-             <legend class="filter-legend">Сетка:</legend>
+           <fieldset class="filters-fieldset">
+             <legend class="filter-legend">Особенности:</legend>
              <p>
-               <label class="radio-button">
-                 <input class="radio-button-input" type="radio" name="grid" id="adaptivity" value="adaptivity" checked>
-                 <span class="radio-button-label">Адаптивная</span>
+               <label class="checkbox">
+                 <input class="checkbox-input" type="checkbox" name="features" id="slider" value="slider">
+                 <span class="checkbox-label">Слайдер</span>
                </label>
              </p>
              <p>
-               <label class="radio-button">
-                 <input class="radio-button-input" type="radio" name="grid" id="fixy" value="fixy">
-                 <span class="radio-button-label">Фиксированная</span>
+               <label class="checkbox">
+                 <input class="checkbox-input" type="checkbox" name="features" id="benefits" value="benefits">
+                 <span class="checkbox-label">Блок преимуществ</span>
                </label>
              </p>
              <p>
-               <label class="radio-button">
-                 <input class="radio-button-input" type="radio" name="grid" id="rubber" value="rubber">
-                 <span class="radio-button-label">Резиновая</span>
+               <label class="checkbox">
+                 <input class="checkbox-input" type="checkbox" name="features" id="news" value="news">
+                 <span class="checkbox-label">Новости</span>
                </label>
              </p>
-         </fieldset>
-
-         <fieldset class="filters-fieldset">
-           <legend class="filter-legend">Особенности:</legend>
-           <p>
-             <label class="checkbox">
-               <input class="checkbox-input" type="checkbox" name="features" id="slider" value="slider">
-               <span class="checkbox-label">Слайдер</span>
-             </label>
-           </p>
-           <p>
-             <label class="checkbox">
-               <input class="checkbox-input" type="checkbox" name="features" id="benefits" value="benefits">
-               <span class="checkbox-label">Блок преимуществ</span>
-             </label>
-           </p>
-           <p>
-             <label class="checkbox">
-               <input class="checkbox-input" type="checkbox" name="features" id="news" value="news">
-               <span class="checkbox-label">Новости</span>
-             </label>
-           </p>
-           <p>
-             <label class="checkbox">
-               <input class="checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
-               <span class="checkbox-label">Галерея</span>
-             </label>
-           </p>
-           <p>
-             <label class="checkbox">
-               <input class="checkbox-input" type="checkbox" name="features" id="basket" value="basket">
-               <span class="checkbox-label">Корзина</span>
-             </label>
-           </p>
-         </fieldset>
-         <!--кнопка «Показать» отвечает за отправку формы
-         на адрес https://echo.htmlacademy.ru/-->
-         <button class="button button-gray">Показать</button>
-       </form>
-     </div>
-
-     <div class="container">
-       <div class="catalog-main-content"><!--Блок сортировки и страниц каталога.-->
-         <div class="sorting">
-         <h2 class="sorting-title">Сортировать:</h2>
-         <ul class="sorting-list">
-           <li class="sorting-item"><a class="sorting-item-link" href="">по цене</a></li>
-           <li class="sorting-item"><a class="sorting-item-link" href="">по типу</a></li>
-           <li class="sorting-item"><a class="sorting-item-link" href="">по названию</a></li>
-           <li class="sorting-item">
-             <a class="sorting-item-link" href=""> <span class="visually-hidden">По возрастанию</span></a>
-           </li>
-           <li class="sorting-item">
-             <a class="sorting-item-link" href=""> <span class="visually-hidden">По уменьшению</span></a>
-           </li>
-         </ul>
+             <p>
+               <label class="checkbox">
+                 <input class="checkbox-input" type="checkbox" name="features" id="gallery" value="gallery">
+                 <span class="checkbox-label">Галерея</span>
+               </label>
+             </p>
+             <p>
+               <label class="checkbox">
+                 <input class="checkbox-input" type="checkbox" name="features" id="basket" value="basket">
+                 <span class="checkbox-label">Корзина</span>
+               </label>
+             </p>
+           </fieldset>
+           <!--кнопка «Показать» отвечает за отправку формы
+           на адрес https://echo.htmlacademy.ru/-->
+           <button class="button button-gray">Показать</button>
+         </form>
        </div>
 
-       <section class="catalog">
-         <h2 class="visually-hidden">Каталог сайтов</h2>
-         <!--Карточка товара: название товара является ссылкой,
-         клик по нему открывает модальное окно с демонстрацией товара.
-         Модальное окно верстать не нужно. Карточка товара: при наполнении
-         текстом блок с текстом не должен вылезать за границы изображения,
-         кнопка покупки не должна пропадать. Количество товаров в правом
-         блоке может быть любым, оно не должно ломать страницу.-->
-         <ul class="catalog-list">
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Sedona</a></h3>
-                 <p class="catalog-card-text">Информационный сайт для туристов</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Pink app</a></h3>
-                 <p class="catalog-card-text">Продуктовый лендинг приложения для iOS и Android</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Barbershop</a></h3>
-                 <p class="catalog-card-text">Сайт салона красоты. Для мужчин, да.</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Mishka</a></h3>
-                 <p class="catalog-card-text">Интернет-магазин вязаных игрушек</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">A plus</a></h3>
-                 <p class="catalog-card-text">Лендинг курсов повышения квалификации</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-           <li>
-             <article class="catalog-card">
-               <div class="catalog-card-nav"><span></span><span></span><span></span></div>
-               <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a>
-               <div class="catalog-card-content">
-                 <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Кваст</a></h3>
-                 <p class="catalog-card-text">Промо-сайт производителя крафтового кваса</p>
-                 <a class="button button-pink" href="">9 900 &#8381;</a>
-               </div>
-             </article>
-           </li>
-         </ul>
+       <div class="container">
+         <div class="catalog-main-content"><!--Блок сортировки и страниц каталога.-->
+           <div class="sorting">
+           <h2 class="sorting-title">Сортировать:</h2>
+           <ul class="sorting-list">
+             <li class="sorting-item"><a class="sorting-item-link" href="">по цене</a></li>
+             <li class="sorting-item"><a class="sorting-item-link" href="">по типу</a></li>
+             <li class="sorting-item"><a class="sorting-item-link" href="">по названию</a></li>
+             <li class="sorting-item">
+               <a class="sorting-item-link" href=""> <span class="visually-hidden">По возрастанию</span></a>
+             </li>
+             <li class="sorting-item">
+               <a class="sorting-item-link" href=""> <span class="visually-hidden">По уменьшению</span></a>
+             </li>
+           </ul>
+         </div>
 
-         <div class="navigation-pages" role="navigation" aria-label="Страницы перехода">
-         <ul class="navigation-list">
-           <li class="navigation-item"><a class="button button-gray navigation-link" href="">Предыдущая</a></li>
-           <li class="navigation-item"><a>1</a></li>
-           <li class="navigation-item"><a class="button button-gray navigation-link" href="">2</a></li>
-           <li class="navigation-item"><a class="button button-gray navigation-link" href="">3</a></li>
-           <li class="navigation-item"><a class="button button-gray navigation-link" href="">Следующая</a></li>
-         </ul>
+         <section class="catalog">
+           <h2 class="visually-hidden">Каталог сайтов</h2>
+           <!--Карточка товара: название товара является ссылкой,
+           клик по нему открывает модальное окно с демонстрацией товара.
+           Модальное окно верстать не нужно. Карточка товара: при наполнении
+           текстом блок с текстом не должен вылезать за границы изображения,
+           кнопка покупки не должна пропадать. Количество товаров в правом
+           блоке может быть любым, оно не должно ломать страницу.-->
+           <ul class="catalog-list">
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-sedona.jpg" width="100" alt="седона"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Sedona</a></h3>
+                   <p class="catalog-card-text">Информационный сайт для туристов</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-pink.jpg" width="100" alt="пинк"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Pink app</a></h3>
+                   <p class="catalog-card-text">Продуктовый лендинг приложения для iOS и Android</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-burber.jpg" width="100" alt="бородински"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Barbershop</a></h3>
+                   <p class="catalog-card-text">Сайт салона красоты. Для мужчин, да.</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-mishka.jpg" width="100" alt="мишка"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Mishka</a></h3>
+                   <p class="catalog-card-text">Интернет-магазин вязаных игрушек</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-a-plus.jpg" width="100" alt="а плюс"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">A plus</a></h3>
+                   <p class="catalog-card-text">Лендинг курсов повышения квалификации</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+             <li>
+               <article class="catalog-card">
+                 <div class="catalog-card-nav"><span></span><span></span><span></span></div>
+                 <a class="catalog-card-link-img" href=""><img class="catalog-card-img" src="img/catalog/catalog-kvast.jpg" width="100" alt="кваст"></a>
+                 <div class="catalog-card-content">
+                   <h3 class="catalog-card-title"><a class="catalog-card-title-link" href="">Кваст</a></h3>
+                   <p class="catalog-card-text">Промо-сайт производителя крафтового кваса</p>
+                   <a class="button button-pink" href="">9 900 &#8381;</a>
+                 </div>
+               </article>
+             </li>
+           </ul>
+
+           <div class="navigation-pages" role="navigation" aria-label="Страницы перехода">
+           <ul class="navigation-list">
+             <li class="navigation-item"><a class="button button-gray navigation-link" href="">Предыдущая</a></li>
+             <li class="navigation-item"><a>1</a></li>
+             <li class="navigation-item"><a class="button button-gray navigation-link" href="">2</a></li>
+             <li class="navigation-item"><a class="button button-gray navigation-link" href="">3</a></li>
+             <li class="navigation-item"><a class="button button-gray navigation-link" href="">Следующая</a></li>
+           </ul>
+         </div>
+         </section>
        </div>
-       </section>
      </div>
    </div>
 
